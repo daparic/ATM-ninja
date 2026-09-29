@@ -42,4 +42,4 @@ To reproduce everything from scratch, run one command (about 35 s on this machin
 | C/C++test Standard | 2026.1.0 (`/opt/parasoft/cpptest_standard-2026.1.0-linux.x86_64`): MISRA C++ 2023 report |
 | License | Node-locked, `~/cpptestcli.properties` (passed with `-settings`) |
 
-[ATM-ninja](https://www.youtube.com/watch?v=t65olE05nGM)
+[![Watch the video](https://img.youtube.com/vi/t65olE05nGM/0.jpg)](https://www.youtube.com/watch?v=t65olE05nGM)
