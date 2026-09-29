@@ -1,0 +1,31 @@
+# Ninja build for the Parasoft C/C++test ATM example.
+# Adapted from examples/ATM/Makefile (g++ -g -Iinclude, objects in obj/).
+
+ninja_required_version = 1.10
+
+cxx      = g++
+ar       = ar
+cxxflags = -g
+incflags = -Iinclude
+builddir = build
+
+rule cxx
+  command = $cxx $cxxflags $incflags -MMD -MF $out.d -c $in -o $out
+  description = CXX $out
+  depfile = $out.d
+  deps = gcc
+
+rule ar
+  command = rm -f $out && $ar crs $out $in
+  description = AR $out
+
+build $builddir/obj/Account.o:     cxx src/Account.cxx
+build $builddir/obj/ATM.o:         cxx src/ATM.cxx
+build $builddir/obj/Bank.o:        cxx src/Bank.cxx
+build $builddir/obj/BaseDisplay.o: cxx src/BaseDisplay.cxx
+
+build $builddir/libatm.a: ar $builddir/obj/Account.o $builddir/obj/ATM.o $
+    $builddir/obj/Bank.o $builddir/obj/BaseDisplay.o
+
+build all: phony $builddir/libatm.a
+default all
