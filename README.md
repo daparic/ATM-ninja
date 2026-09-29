@@ -41,3 +41,5 @@ To reproduce everything from scratch, run one command (about 35 s on this machin
 | C/C++test Professional | 2026.1.0 (`/opt/parasoft/cpptest_professional-2026.1.0-linux.x86_64`): unit test generation and execution |
 | C/C++test Standard | 2026.1.0 (`/opt/parasoft/cpptest_standard-2026.1.0-linux.x86_64`): MISRA C++ 2023 report |
 | License | Node-locked, `~/cpptestcli.properties` (passed with `-settings`) |
+
+[ATM-ninja](https://www.youtube.com/watch?v=t65olE05nGM)
